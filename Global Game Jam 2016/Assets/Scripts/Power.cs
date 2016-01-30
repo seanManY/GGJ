@@ -8,11 +8,15 @@ public class Power : MonoBehaviour
     public int speed;
     public int life;
 
+    public Material fire;
+    public Material water;
+    public Material air;
+
   
     // Use this for initialization
     void Start()
     {
-
+               
     }
 	
 	// Update is called once per frame
@@ -36,10 +40,13 @@ public class Power : MonoBehaviour
         switch (type)
         {
             case 0: this.gameObject.tag = "fire";
+                    GetComponent<Renderer>().material = fire;
                     break;
             case 1: this.gameObject.tag = "water";
+                    GetComponent<Renderer>().material = water;
                     break;
             case 2: this.gameObject.tag = "air";
+                    GetComponent<Renderer>().material = air;
                     break;
         }
     }
