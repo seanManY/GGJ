@@ -50,9 +50,10 @@ public class GameController : MonoBehaviour {
                 //Vector3 obstaclePos = new Vector3(15, 0, 0);
                 //Instantiate(obstacle, obstaclePos, Quaternion.Euler(0, 0, 0));
 
-                Vector3 spiderPos = new Vector3(15, 0, 0);
+                Vector3 spiderPos = new Vector3(15, 7, 0);
                 Instantiate(spider, spiderPos, Quaternion.Euler(0, 0, 0));
             }
+           
         }
 	}
 }

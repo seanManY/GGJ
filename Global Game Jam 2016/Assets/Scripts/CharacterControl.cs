@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CharacterControl : MonoBehaviour {
 
-    private int health = 5;
+    private int health = 3;
     public bool grounded = true;
     public GameObject GUI;
     private GameObject gui;
@@ -51,7 +51,7 @@ public class CharacterControl : MonoBehaviour {
     //Update is called once per frame
     void Update()
     {
-        //Debug.Log(grounded);
+        Debug.Log(health);
         //if (Input.GetButton("Jump") && grounded)
         //   gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight);
     }
@@ -158,6 +158,38 @@ public class CharacterControl : MonoBehaviour {
             }
             
            
+        }
+
+        if(coll.gameObject.tag == "web")
+        {
+            
+            
+
+            if (!invincible)
+            {
+                health--;
+                invincible = true;
+                StartCoroutine(wait());
+                Destroy(coll.transform.parent.gameObject);
+
+            }
+
+        }
+
+        if (coll.gameObject.tag == "spider")
+        {
+            
+            
+
+            if (!invincible)
+            {
+                health--;
+                invincible = true;
+                StartCoroutine(wait());
+                Destroy(coll.transform.parent.gameObject);
+
+            }
+
         }
     }
 

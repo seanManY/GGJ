@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\GroundCheck.cs" />
      <Compile Include="Assets\Scripts\ObstacleBehavior.cs" />
      <Compile Include="Assets\Scripts\Power.cs" />
+     <Compile Include="Assets\Scripts\ShotBehavior.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
