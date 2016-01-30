@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{D5373E7D-63B4-241B-4D2B-A8F1C9E2DAD8}") = "Global Game Jam 2016", "Assembly-CSharp.csproj", "{2C5AFD8C-4FF0-CD34-CC7B-531BF4527C36}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global Game Jam 2016.CSharp", "Global Game Jam 2016.CSharp.csproj", "{0E2DA33B-3BBF-ABBB-2A92-3F15CB30A3A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,40 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2C5AFD8C-4FF0-CD34-CC7B-531BF4527C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C5AFD8C-4FF0-CD34-CC7B-531BF4527C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C5AFD8C-4FF0-CD34-CC7B-531BF4527C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C5AFD8C-4FF0-CD34-CC7B-531BF4527C36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E2DA33B-3BBF-ABBB-2A92-3F15CB30A3A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E2DA33B-3BBF-ABBB-2A92-3F15CB30A3A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E2DA33B-3BBF-ABBB-2A92-3F15CB30A3A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E2DA33B-3BBF-ABBB-2A92-3F15CB30A3A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
-	EndGlobalSection
 EndGlobal
-=======
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{D5373E7D-63B4-241B-4D2B-A8F1C9E2DAD8}") = "Global Game Jam 2016", "Assembly-CSharp.csproj", "{2C5AFD8C-4FF0-CD34-CC7B-531BF4527C36}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2C5AFD8C-4FF0-CD34-CC7B-531BF4527C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C5AFD8C-4FF0-CD34-CC7B-531BF4527C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C5AFD8C-4FF0-CD34-CC7B-531BF4527C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C5AFD8C-4FF0-CD34-CC7B-531BF4527C36}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
-	EndGlobalSection
-EndGlobal
->>>>>>> origin/master

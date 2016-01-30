@@ -124,20 +124,20 @@ public class CharacterControl : MonoBehaviour {
         if (collision.gameObject.tag == "air")
         {
             Destroy(collision.gameObject);
-            if (waterCount < 3)
+            if (airCount < 3)
             {
                 gui.GetComponent<GUI>().add(airCount, 1);
-                waterCount++;
+                airCount++;
             }
         }
 
         if (collision.gameObject.tag == "water")
         {
             Destroy(collision.gameObject);
-            if (airCount < 3)
+            if (waterCount < 3)
             {
                 gui.GetComponent<GUI>().add(waterCount, 2);
-                airCount++;
+                waterCount++;
             }
         }
      }
