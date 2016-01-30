@@ -32,10 +32,10 @@ public class CharacterControl : MonoBehaviour {
 	}
 	
 	//Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
     {
        
-        Debug.Log(fireCount);
+        Debug.Log(state);
         GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity + new Vector3(0, -gravity, 0);
         if (Input.GetKeyDown("space"))
             Jump();
