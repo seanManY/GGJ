@@ -3,11 +3,12 @@ using System.Collections;
 
 public class Power : MonoBehaviour
 {
+
     // Instance Variables
     public int speed;
     public int life;
-    private int type;
-    
+
+  
     // Use this for initialization
     void Start()
     {
@@ -25,24 +26,21 @@ public class Power : MonoBehaviour
     }
     
     // Methods
-    void OnCollisionEnter(Collision obj)
-    {
-        if(obj.gameObject.tag == "player")
-            Destroy(this.gameObject);
-    }
-
-    public int Type()
-    {
-        return type;
-    }
-
-    public void SetType(int type)
-    {
-        this.type = type;
-    }
-
     public void SetPosition(int posi)
     {
         transform.Translate(0, posi, 0);
+    }
+
+    public void setTag(int type)
+    {
+        switch (type)
+        {
+            case 0: this.gameObject.tag = "fire";
+                    break;
+            case 1: this.gameObject.tag = "water";
+                    break;
+            case 2: this.gameObject.tag = "air";
+                    break;
+        }
     }
 }

@@ -10,10 +10,17 @@ public class CharacterControl : MonoBehaviour {
         normal,
         jumping
     }
+
+    public GameObject Power; //reference to power script
+    private Power powObj;
    
     public int     jumpHeight = 5;
-    public float   gravity = 3;
-    public State state;
+    public float   gravity    = 3;
+    public State   state;
+
+    private int waterCount    = 0;
+    private int fireCount     = 0;
+    private int airCount      = 0;
 
     
     // rigidbody.constraints = RigidBodyConstraints.FreezePositionY;
@@ -21,13 +28,14 @@ public class CharacterControl : MonoBehaviour {
 	void Start () 
     {
         state = State.normal;
+
 	}
 	
 	//Update is called once per frame
 	void Update () 
     {
-
-        Debug.Log(state);
+       
+        Debug.Log(fireCount);
         GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity + new Vector3(0, -gravity, 0);
         if (Input.GetKeyDown("space"))
             Jump();
@@ -41,6 +49,21 @@ public class CharacterControl : MonoBehaviour {
     public void setHealth(int delta)
     {
         health += delta;
+    }
+
+    public int getFire()
+    {
+        return fireCount;
+    }
+
+    public int getAir()
+    {
+        return airCount;
+    }
+
+    public int getWater()
+    {
+        return waterCount;
     }
 
     void Jump()
@@ -60,6 +83,28 @@ public class CharacterControl : MonoBehaviour {
         {
             
             state = State.normal;
+        }
+
+        //implement UI
+        if (collision.gameObject.tag == "fire")
+        {
+            Destroy(collision.gameObject);
+            if(fireCount < 3)
+                fireCount++;
+        }
+
+        if (collision.gameObject.tag == "water")
+        {
+            Destroy(collision.gameObject);
+            if (waterCount < 3)
+                waterCount++;
+        }
+
+        if (collision.gameObject.tag == "air")
+        {
+            Destroy(collision.gameObject);
+            if (airCount < 3)
+                airCount++;
         }
      }
 }
