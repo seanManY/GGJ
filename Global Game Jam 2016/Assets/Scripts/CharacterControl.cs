@@ -51,7 +51,7 @@ public class CharacterControl : MonoBehaviour {
     //Update is called once per frame
     void Update()
     {
-        Debug.Log(health);
+        //Debug.Log(health);
         //if (Input.GetButton("Jump") && grounded)
         //   gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight);
     }
@@ -124,20 +124,20 @@ public class CharacterControl : MonoBehaviour {
         if (collision.gameObject.tag == "air")
         {
             Destroy(collision.gameObject);
-            if (waterCount < 3)
+            if (airCount < 3)
             {
                 gui.GetComponent<GUI>().add(airCount, 1);
-                waterCount++;
+                airCount++;
             }
         }
 
         if (collision.gameObject.tag == "water")
         {
             Destroy(collision.gameObject);
-            if (airCount < 3)
+            if (waterCount < 3)
             {
                 gui.GetComponent<GUI>().add(waterCount, 2);
-                airCount++;
+                waterCount++;
             }
         }
      }
@@ -149,8 +149,7 @@ public class CharacterControl : MonoBehaviour {
             if(!invincible)
             {
                 health--;
-                if(health >= 0)
-                    gui.GetComponent<GUI>().damage(health);
+                gui.GetComponent<GUI>().damage(health);
                 //if(health <= 0)
                     //Death;
                 invincible = true;
@@ -169,6 +168,11 @@ public class CharacterControl : MonoBehaviour {
             if (!invincible)
             {
                 health--;
+                Debug.Log("Hurt");
+                if (health >= 0)
+                    gui.GetComponent<GUI>().damage(health);
+                //if(health <= 0)
+                //Death;
                 invincible = true;
                 StartCoroutine(wait());
                 Destroy(coll.transform.parent.gameObject);
@@ -185,6 +189,10 @@ public class CharacterControl : MonoBehaviour {
             if (!invincible)
             {
                 health--;
+                if (health >= 0)
+                    gui.GetComponent<GUI>().damage(health);
+                //if(health <= 0)
+                //Death;
                 invincible = true;
                 StartCoroutine(wait());
                 Destroy(coll.transform.parent.gameObject);
@@ -197,7 +205,7 @@ public class CharacterControl : MonoBehaviour {
     //used to wait for seconds
     IEnumerator wait()
     {
-        print(Time.time);
+        //print(Time.time);
         yield return new WaitForSeconds(invFrames);
         invincible = false;
         
