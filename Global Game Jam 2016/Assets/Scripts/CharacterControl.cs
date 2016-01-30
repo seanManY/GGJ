@@ -149,7 +149,8 @@ public class CharacterControl : MonoBehaviour {
             if(!invincible)
             {
                 health--;
-                gui.GetComponent<GUI>().damage(health);
+                if(health >= 0)
+                    gui.GetComponent<GUI>().damage(health);
                 //if(health <= 0)
                     //Death;
                 invincible = true;

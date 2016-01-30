@@ -28,7 +28,7 @@ public class GUI : MonoBehaviour
 
         for (int i = 0; i < 3; i++)
         {
-            Health[i] = (GameObject)Instantiate(Heart, new Vector3(8 + 2*i, 8, 0), Quaternion.identity);
+            Health[i] = (GameObject)Instantiate(Heart, new Vector3(7 + 2*i, 8, -1), Quaternion.identity);
         }
     }
 	
