@@ -5,6 +5,8 @@ public class CharacterControl : MonoBehaviour {
 
     private int health = 5;
     public bool grounded = true;
+    public GameObject GUI;
+    private GameObject gui;
 
     public enum State
     {
@@ -34,9 +36,17 @@ public class CharacterControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
+
         state = State.normal;
        // shootPrefab = this.gameObject.transform.GetChild(0);
-	}
+	
+        state = State.jumping;
+        
+        Vector3 guiPos = new Vector3(0, 0, 0);
+        gui = (GameObject)Instantiate(GUI, guiPos, Quaternion.identity);
+        //gui = GUI.GetComponent("GUI") as GUI;
+    }
+
 
     //Update is called once per frame
     void Update()
@@ -78,21 +88,6 @@ public class CharacterControl : MonoBehaviour {
         health += delta;
     }
 
-    public int getFire()
-    {
-        return fireCount;
-    }
-
-    public int getAir()
-    {
-        return airCount;
-    }
-
-    public int getWater()
-    {
-        return waterCount;
-    }
-
     void Jump()
     {
         if (state == State.normal)
@@ -119,22 +114,31 @@ public class CharacterControl : MonoBehaviour {
         if (collision.gameObject.tag == "fire")
         {
             Destroy(collision.gameObject);
-            if(fireCount < 3)
+            if (fireCount < 3)
+            {
+                gui.GetComponent<GUI>().add(fireCount, 0);
                 fireCount++;
-        }
-
-        if (collision.gameObject.tag == "water")
-        {
-            Destroy(collision.gameObject);
-            if (waterCount < 3)
-                waterCount++;
+            }
         }
 
         if (collision.gameObject.tag == "air")
         {
             Destroy(collision.gameObject);
+            if (waterCount < 3)
+            {
+                gui.GetComponent<GUI>().add(airCount, 1);
+                waterCount++;
+            }
+        }
+
+        if (collision.gameObject.tag == "water")
+        {
+            Destroy(collision.gameObject);
             if (airCount < 3)
+            {
+                gui.GetComponent<GUI>().add(waterCount, 2);
                 airCount++;
+            }
         }
      }
 
