@@ -149,8 +149,11 @@ public class CharacterControl : MonoBehaviour {
             if(!invincible)
             {
                 health--;
+                gui.GetComponent<GUI>().damage(health);
+                //if(health <= 0)
+                    //Death;
                 invincible = true;
-                 StartCoroutine(wait());
+                StartCoroutine(wait());
                 
             }
             
