@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CharacterControl : MonoBehaviour {
 
-    private int health = 3;
+    private int health = 5;
     public bool grounded = true;
     public GameObject GUI;
     private GameObject gui;
@@ -21,9 +21,12 @@ public class CharacterControl : MonoBehaviour {
     public float   gravity    = 3;
     public State   state;
 
-    private int waterCount    = 0;
-    private int fireCount     = 0;
-    private int airCount      = 0;
+    private int    waterCount = 0;
+    private int    fireCount  = 0;
+    private int    airCount   = 0;
+
+    public  int    invFrames  = 3;
+    private bool   invincible = false;
 
     
     // rigidbody.constraints = RigidBodyConstraints.FreezePositionY;
@@ -48,10 +51,15 @@ public class CharacterControl : MonoBehaviour {
     void FixedUpdate () 
     {
        
-        //Debug.Log(state);
+        //Debug.Log(health);
         GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity + new Vector3(0, -gravity, 0);
         if (Input.GetKeyDown("space"))
             Jump();
+
+        if(health <= 0)
+        {
+           // Debug.Log("you are dead");
+        }
 	}
 
     public int getHealth()
@@ -84,6 +92,8 @@ public class CharacterControl : MonoBehaviour {
             state = State.normal;
         }
 
+        
+
         //implement UI
         if (collision.gameObject.tag == "fire")
         {
@@ -115,4 +125,28 @@ public class CharacterControl : MonoBehaviour {
             }
         }
      }
+
+    void OnTriggerEnter(Collider coll)
+    {
+        if (coll.gameObject.tag == "obstacle")
+        {
+            if(!invincible)
+            {
+                health--;
+                invincible = true;
+                 StartCoroutine(wait());
+                invincible = false;
+            }
+            
+           
+        }
+    }
+
+    //used to wait for seconds
+    IEnumerator wait()
+    {
+        print(Time.time);
+        yield return new WaitForSeconds(50000f);
+        print(Time.time);
+    }
 }
