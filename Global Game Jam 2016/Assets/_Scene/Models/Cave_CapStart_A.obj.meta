@@ -1,36 +1,17 @@
 fileFormatVersion: 2
-guid: 3a98f50225dc14735931406fac5d07cf
-timeCreated: 1454172706
+guid: 494644d845e074b5599a6bd0fe5c3354
+timeCreated: 1454175876
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cave_MidSection_A
-    100004: Cube
-    100006: Cave_CapEnd_A
-    100008: Cave_CapStart_A
+    100002: default
     400000: //RootNode
-    400002: Cave_MidSection_A
-    400004: Cube
-    400006: Cave_CapEnd_A
-    400008: Cave_CapStart_A
-    2300000: //RootNode
-    2300002: Cave_MidSection_A
-    2300004: Cube
-    2300006: Cave_CapEnd_A
-    2300008: Cave_CapStart_A
-    3300000: //RootNode
-    3300002: Cave_MidSection_A
-    3300004: Cube
-    3300006: Cave_CapEnd_A
-    3300008: Cave_CapStart_A
-    4300000: Cube
-    4300002: Cave_MidSection_A
-    4300004: Cave_CapEnd_A
-    4300006: Cave_CapStart_A
-    7400000: Default Take
-    9500000: //RootNode
+    400002: default
+    2300000: default
+    3300000: default
+    4300000: default
   materials:
     importMaterials: 1
     materialName: 0
@@ -89,7 +70,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
