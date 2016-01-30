@@ -5,9 +5,13 @@ public class GameController : MonoBehaviour {
 
     public GameObject floor;
     public GameObject player;
+    public GameObject power;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
+        Vector3 powerPos = new Vector3(-5, 5, 0);
+        Instantiate(power, powerPos, Quaternion.identity);
 
         Vector3 playerPos = new Vector3(-5, 5, 0);
         Instantiate(player, playerPos, Quaternion.identity);

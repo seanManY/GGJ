@@ -71,6 +71,7 @@ public class CharacterControl : MonoBehaviour {
         if (state == State.normal)
         {
             GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity + new Vector3(0, jumpHeight, 0);
+            //GetComponent<Rigidbody>().AddForce(new Vector3(0f, jumpHeight, 0));
             state = State.jumping;
         }
     }
