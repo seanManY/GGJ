@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour {
     public GameObject floor;
     public GameObject player;
     public GameObject obstacle;
+    public GameObject spider;
 
     private int random;
 
@@ -46,8 +47,11 @@ public class GameController : MonoBehaviour {
 
             if(random > 5)
             {
-                Vector3 obstaclePos = new Vector3(15, 0, 0);
-                Instantiate(obstacle, obstaclePos, Quaternion.Euler(0, 0, 0));
+                //Vector3 obstaclePos = new Vector3(15, 0, 0);
+                //Instantiate(obstacle, obstaclePos, Quaternion.Euler(0, 0, 0));
+
+                Vector3 spiderPos = new Vector3(15, 0, 0);
+                Instantiate(spider, spiderPos, Quaternion.Euler(0, 0, 0));
             }
         }
 	}

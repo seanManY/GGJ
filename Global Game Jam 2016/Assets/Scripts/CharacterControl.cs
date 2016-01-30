@@ -26,12 +26,16 @@ public class CharacterControl : MonoBehaviour {
     public  int    invFrames  = 3;
     private bool   invincible = false;
 
+    public Transform shootPrefab; // position of the shooter
+    public GameObject shot;        //the shot prefab
+
     
     // rigidbody.constraints = RigidBodyConstraints.FreezePositionY;
 	// Use this for initialization
 	void Start () 
     {
         state = State.normal;
+       // shootPrefab = this.gameObject.transform.GetChild(0);
 	}
 
     //Update is called once per frame
@@ -47,14 +51,22 @@ public class CharacterControl : MonoBehaviour {
        
         //Debug.Log(health);
         GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity + new Vector3(0, -gravity, 0);
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
             Jump();
+
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+            shoot();
 
         if(health <= 0)
         {
            // Debug.Log("you are dead");
         }
 	}
+
+    public void shoot()
+    {
+        Instantiate(shot, shootPrefab.transform.position, shootPrefab.rotation);
+    }
 
     public int getHealth()
     {
@@ -135,7 +147,7 @@ public class CharacterControl : MonoBehaviour {
                 health--;
                 invincible = true;
                  StartCoroutine(wait());
-                invincible = false;
+                
             }
             
            
@@ -146,7 +158,8 @@ public class CharacterControl : MonoBehaviour {
     IEnumerator wait()
     {
         print(Time.time);
-        yield return new WaitForSeconds(50000f);
-        print(Time.time);
+        yield return new WaitForSeconds(invFrames);
+        invincible = false;
+        
     }
 }
