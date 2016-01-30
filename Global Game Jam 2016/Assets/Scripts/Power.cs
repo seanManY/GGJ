@@ -7,14 +7,12 @@ public class Power : MonoBehaviour
     public int speed;
     public int life;
     private int type;
-    private int posi;
-
+    
     // Use this for initialization
-    void Start(int type, int posi)
+    void Start()
     {
-        this.type = type;
-        transform.Translate(0, posi, 0);
-	}
+
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate()
@@ -27,14 +25,24 @@ public class Power : MonoBehaviour
     }
     
     // Methods
-    void OnCollisionEnter(Collider obj)
+    void OnCollisionEnter(Collision obj)
     {
-        if(obj.tag == "player")
+        if(obj.gameObject.tag == "player")
             Destroy(this.gameObject);
     }
 
     public int Type()
     {
         return type;
+    }
+
+    public void SetType(int type)
+    {
+        this.type = type;
+    }
+
+    public void SetPosition(int posi)
+    {
+        transform.Translate(0, posi, 0);
     }
 }
