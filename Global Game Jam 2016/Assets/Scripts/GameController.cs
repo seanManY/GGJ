@@ -3,12 +3,17 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
+    // Instance Variables
     public GameObject floor;
     public GameObject player;
+    public int rate = 10;
+    private int time;
 
 	// Use this for initialization
-	void Start () {
-
+	void Start ()
+    {
+        time = rate;
+        
         Vector3 playerPos = new Vector3(-5, 5, 0);
         Instantiate(player, playerPos, Quaternion.identity);
 
@@ -22,9 +27,12 @@ public class GameController : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate() 
     {
-       
-        Vector3 floorPos = new Vector3(15, 0, 0);
-        Instantiate(floor, floorPos, Quaternion.identity);
-       
+        time--;
+        if (time < 0)
+        {
+            Vector3 floorPos = new Vector3(15, 0, 0);
+            Instantiate(floor, floorPos, Quaternion.identity);
+            time = rate;
+        }
 	}
 }

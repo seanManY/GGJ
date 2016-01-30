@@ -4,6 +4,7 @@ using System.Collections;
 public class CharacterControl : MonoBehaviour {
 
     private int health = 3;
+    public bool grounded = true;
 
     public enum State
     {
@@ -28,14 +29,20 @@ public class CharacterControl : MonoBehaviour {
 	void Start () 
     {
         state = State.normal;
-
 	}
-	
-	//Update is called once per frame
-	void FixedUpdate () 
+
+    //Update is called once per frame
+    void Update()
+    {
+        //Debug.Log(grounded);
+        //if (Input.GetButton("Jump") && grounded)
+        //   gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight);
+    }
+
+    void FixedUpdate () 
     {
        
-        Debug.Log(state);
+        //Debug.Log(state);
         GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity + new Vector3(0, -gravity, 0);
         if (Input.GetKeyDown("space"))
             Jump();
