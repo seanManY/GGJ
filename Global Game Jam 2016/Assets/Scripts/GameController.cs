@@ -116,7 +116,6 @@ public class GameController : MonoBehaviour {
 
             block = true;
             //ranRate *= .00001f;
-            Debug.Log(ranRate);
            
         }
 

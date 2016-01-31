@@ -195,7 +195,7 @@ public class CharacterControl : MonoBehaviour {
                 //Death;
                 invincible = true;
                 StartCoroutine(wait());
-                Destroy(coll.transform.parent.gameObject);
+                Destroy(coll.gameObject);
 
             }
 

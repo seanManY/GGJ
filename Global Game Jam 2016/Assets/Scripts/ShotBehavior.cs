@@ -28,8 +28,11 @@ public class ShotBehavior : MonoBehaviour {
 
         if(coll.gameObject.tag == "spider")
         {
-            Destroy(coll.transform.parent.gameObject);
             Destroy(this.gameObject);
+            Destroy(coll.gameObject);
+            
         }
+
+        //Destroy(this.gameObject);
     }
 }
