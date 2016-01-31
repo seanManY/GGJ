@@ -1,76 +1,12 @@
 fileFormatVersion: 2
-guid: 3a98f50225dc14735931406fac5d07cf
-timeCreated: 1454172706
+guid: ca178ce0d4d2642498a0049aafeb7f3d
+timeCreated: 1454211564
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cave_MidSection_A
-    100004: Cube
-    100006: Cave_CapEnd_A
-    100008: Cave_CapStart_A
-    100010: Cube_001
-    100012: Cube_002
-    100014: Cave_Background_A
-    100016: Wizard_Static
-    100018: Spider
-    100020: Spider_001
-    100022: Spikes
-    100024: Spider_Static
     400000: //RootNode
-    400002: Cave_MidSection_A
-    400004: Cube
-    400006: Cave_CapEnd_A
-    400008: Cave_CapStart_A
-    400010: Cube_001
-    400012: Cube_002
-    400014: Cave_Background_A
-    400016: Wizard_Static
-    400018: Spider
-    400020: Spider_001
-    400022: Spikes
-    400024: Spider_Static
-    2300000: //RootNode
-    2300002: Cave_MidSection_A
-    2300004: Cube
-    2300006: Cave_CapEnd_A
-    2300008: Cave_CapStart_A
-    2300010: Cube_001
-    2300012: Cube_002
-    2300014: Cave_Background_A
-    2300016: Wizard_Static
-    2300018: Spider
-    2300020: Spider_001
-    2300022: Spikes
-    2300024: Spider_Static
-    3300000: //RootNode
-    3300002: Cave_MidSection_A
-    3300004: Cube
-    3300006: Cave_CapEnd_A
-    3300008: Cave_CapStart_A
-    3300010: Cube_001
-    3300012: Cube_002
-    3300014: Cave_Background_A
-    3300016: Wizard_Static
-    3300018: Spider
-    3300020: Spider_001
-    3300022: Spikes
-    3300024: Spider_Static
-    4300000: Cube
-    4300002: Cave_MidSection_A
-    4300004: Cave_CapEnd_A
-    4300006: Cave_CapStart_A
-    4300008: Cube_001
-    4300010: Cube_002
-    4300012: Cave_Background_A
-    4300014: Wizard_Static
-    4300016: Spider_001
-    4300018: Spider
-    4300020: Spikes
-    4300022: Spider_Static
-    7400000: Default Take
-    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -129,7 +65,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
