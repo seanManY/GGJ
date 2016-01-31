@@ -8,6 +8,8 @@ public class CharacterControl : MonoBehaviour {
     public GameObject GUI;
     private GameObject gui;
 
+    public GameObject newGround;
+
     public enum State
     {
         normal,
@@ -22,8 +24,8 @@ public class CharacterControl : MonoBehaviour {
     public State   state;
 
     private int    waterCount = 0;
-    private int    fireCount  = 0;
-    private int    airCount   = 0;
+    private int    fireCount  = 3;
+    private int    airCount   = 3;
     private int    highlight  = 0;
 
     public  int    invFrames  = 3;
@@ -31,6 +33,8 @@ public class CharacterControl : MonoBehaviour {
 
     public Transform shootPrefab; // position of the shooter
     public GameObject shot;        //the shot prefab
+    public GameObject megaShot;
+    public GameObject airPlat;
 
     public float fireRate;
     private float nextFire = 5;
@@ -242,29 +246,38 @@ public class CharacterControl : MonoBehaviour {
     public void fireRitual()
     {
         gui.GetComponent<GUI>().empty(0);
-
-        while (Time.time <= specialFireRate)
+        Instantiate(megaShot, shootPrefab.transform.position, shootPrefab.rotation);
+            
+        //while (Time.time <= specialFireRate)
         {
-            fireRate = .00001f;
-            fireCount = 0;
+            
+            //fireRate = .00001f;
+            //fireCount = 0;
         }
     }
+    
 
     
 
     public void airRitual()
     {
         gui.GetComponent<GUI>().empty(1);
-
-        while (Time.time <= airTime)
-        {
-            
-            Vector3 movement = new Vector3(-2, 0.0f, 0.0f);
-            GetComponent<Rigidbody>().velocity = movement;
-
-            airCount = 0;
-        }
+        Jump();
+        StartCoroutine(air());
         
+
+        
+       
+        
+    }
+
+    IEnumerator air()
+    {
+        //print(Time.time);
+        yield return new WaitForSeconds(.3f); 
+        Instantiate(airPlat, new Vector3(transform.position.x, 2, transform.position.z), Quaternion.identity);
+        
+
     }
 
     public void waterRitual()
