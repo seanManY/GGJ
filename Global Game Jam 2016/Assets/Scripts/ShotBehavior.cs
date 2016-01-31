@@ -18,18 +18,21 @@ public class ShotBehavior : MonoBehaviour {
 
     void OnTriggerEnter(Collider coll)
     {
-       
-        if(coll.gameObject.tag == "web")
+        
+        if(coll.gameObject.tag == "Web")
         {
-            
-            Destroy(coll.gameObject);
+            Debug.Log(coll);
+
+            Destroy(coll.transform.parent.gameObject);
             Destroy(this.gameObject);
         }
 
-        if(coll.gameObject.tag == "spider")
+        if(coll.gameObject.tag == "Spider")
         {
-            Destroy(coll.transform.parent.gameObject);
+            Destroy(coll.gameObject);
             Destroy(this.gameObject);
+
+           
         }
     }
 }
