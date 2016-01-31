@@ -38,9 +38,8 @@ public class CharacterControl : MonoBehaviour {
     {
 
         state = State.normal;
-       // shootPrefab = this.gameObject.transform.GetChild(0);
 	
-        state = State.jumping;
+       // state = State.jumping;
         
         Vector3 guiPos = new Vector3(0, 0, 0);
         gui = (GameObject)Instantiate(GUI, guiPos, Quaternion.identity);
@@ -62,7 +61,11 @@ public class CharacterControl : MonoBehaviour {
         //Debug.Log(health);
         GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity + new Vector3(0, -gravity, 0);
         if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+
             Jump();
+        }
+            
 
         if (Input.GetKeyDown(KeyCode.LeftAlt))
             shoot();
