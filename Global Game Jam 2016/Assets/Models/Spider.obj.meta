@@ -1,29 +1,17 @@
 fileFormatVersion: 2
-guid: ca178ce0d4d2642498a0049aafeb7f3d
-timeCreated: 1454211564
+guid: 44cd6830ebaa4459b815867711bfc545
+timeCreated: 1454213785
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Arm
-    100004: Armature
-    100006: Body
-    100008: Head
-    100010: Robe
-    100012: Staff
-    100014: Wizard
-    400000: //RootNode
-    400002: Arm
-    400004: Armature
-    400006: Body
-    400008: Head
-    400010: Robe
-    400012: Staff
-    400014: Wizard
-    2300000: Wizard
-    3300000: Wizard
-    4300000: Wizard
+    100000: default
+    100002: //RootNode
+    400000: default
+    400002: //RootNode
+    2300000: default
+    3300000: default
+    4300000: default
   materials:
     importMaterials: 1
     materialName: 0
