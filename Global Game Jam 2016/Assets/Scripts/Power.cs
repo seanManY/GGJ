@@ -8,9 +8,9 @@ public class Power : MonoBehaviour
     public int speed;
     public int life;
 
-    public Material fire;
-    public Material water;
-    public Material air;
+    //public Mesh fire;
+    //public Mesh water;
+    //public Mesh air;
 
   
     // Use this for initialization
@@ -22,6 +22,8 @@ public class Power : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate()
     {
+        //transform.Rotate(0, 0, 1);
+
         transform.Translate(Time.deltaTime * -speed, 0, 0);
 
         life--;
@@ -40,13 +42,10 @@ public class Power : MonoBehaviour
         switch (type)
         {
             case 0: this.gameObject.tag = "fire";
-                    GetComponent<Renderer>().material = fire;
                     break;
             case 1: this.gameObject.tag = "water";
-                    GetComponent<Renderer>().material = water;
                     break;
             case 2: this.gameObject.tag = "air";
-                    GetComponent<Renderer>().material = air;
                     break;
         }
     }

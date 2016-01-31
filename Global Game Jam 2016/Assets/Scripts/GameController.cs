@@ -21,6 +21,10 @@ public class GameController : MonoBehaviour {
     private GameObject POWER;
     public  GameObject power;
 
+    public GameObject fire;
+    public GameObject wind;
+    public GameObject water;
+
     public GameObject background;
 
     private bool block;
@@ -73,14 +77,27 @@ public class GameController : MonoBehaviour {
             if (ranTime < 0)
             {
 
-                if (random <= 20)
+                if (random <= 100)
                 {
                     //power ups
                     int powRandHeight = Random.Range(2, maxRange);
                     Vector3 powerPos = new Vector3(15, powRandHeight, 0);
-                    POWER = (GameObject)Instantiate(power, powerPos, Quaternion.identity);
                     int powRandom = Random.Range(0, 3);
-                    POWER.GetComponent<Power>().setTag(powRandom);
+                    Debug.Log(powRandom);
+                    switch (powRandom)
+                    {
+                        case 0: POWER = (GameObject)Instantiate(fire, powerPos, Quaternion.Euler(90,0,0));
+                                POWER.GetComponent<Power>().setTag(powRandom);
+                                break;
+                        case 1: POWER = (GameObject)Instantiate(water, powerPos, Quaternion.Euler(-90, 0, 0));
+                                POWER.GetComponent<Power>().setTag(powRandom);
+                                break;
+                        case 2: POWER = (GameObject)Instantiate(wind, powerPos, Quaternion.Euler(0, 0, 0) );
+                                POWER.GetComponent<Power>().setTag(powRandom);
+                                break;
+                    }
+                    
+                    
                     block = false;
                     ranTime = ranRate;
                 }
