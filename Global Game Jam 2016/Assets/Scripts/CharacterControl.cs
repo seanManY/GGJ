@@ -24,8 +24,8 @@ public class CharacterControl : MonoBehaviour {
     public State   state;
 
     private int    waterCount = 0;
-    private int    fireCount  = 3;
-    private int    airCount   = 3;
+    private int    fireCount  = 0;
+    private int    airCount   = 0;
     private int    highlight  = 0;
 
     public  int    invFrames  = 3;

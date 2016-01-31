@@ -45,7 +45,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AirBehavior.cs" />
      <Compile Include="Assets\EndlessCaveAmbience\Scripts\DemoScripts\DebugConsole.cs" />
      <Compile Include="Assets\EndlessCaveAmbience\Scripts\DemoScripts\MusicControlDemo.cs" />
      <Compile Include="Assets\EndlessCaveAmbience\Scripts\DemoScripts\RandomisedMusicDemo.cs" />
@@ -53,6 +52,7 @@
      <Compile Include="Assets\EndlessCaveAmbience\Scripts\RandomisedMusic.cs" />
      <Compile Include="Assets\EndlessCaveAmbience\Scripts\RandomisedMusicOriginal.cs" />
      <Compile Include="Assets\EndlessCaveAmbience\Scripts\VolumeControl.cs" />
+     <Compile Include="Assets\Scripts\AirBehavior.cs" />
      <Compile Include="Assets\Scripts\BackgroundVehavior.cs" />
      <Compile Include="Assets\Scripts\CharacterControl.cs" />
      <Compile Include="Assets\Scripts\FloorBehavior.cs" />
@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GroundCheck.cs" />
      <Compile Include="Assets\Scripts\LoadLevel.cs" />
+     <Compile Include="Assets\Scripts\MegaShot.cs" />
      <Compile Include="Assets\Scripts\ObstacleBehavior.cs" />
      <Compile Include="Assets\Scripts\Power.cs" />
      <Compile Include="Assets\Scripts\ShotBehavior.cs" />
