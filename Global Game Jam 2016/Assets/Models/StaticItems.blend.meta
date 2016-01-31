@@ -24,6 +24,7 @@ ModelImporter:
     100032: Cube_005
     100034: Cube_006
     100036: WindGem
+    100038: Arch
     400000: //RootNode
     400002: Cave_MidSection_A
     400004: Cube
@@ -43,6 +44,7 @@ ModelImporter:
     400032: Cube_005
     400034: Cube_006
     400036: WindGem
+    400038: Arch
     2300000: //RootNode
     2300002: Cave_MidSection_A
     2300004: Cube
@@ -62,6 +64,7 @@ ModelImporter:
     2300032: Cube_005
     2300034: Cube_006
     2300036: WindGem
+    2300038: Arch
     3300000: //RootNode
     3300002: Cave_MidSection_A
     3300004: Cube
@@ -81,6 +84,7 @@ ModelImporter:
     3300032: Cube_005
     3300034: Cube_006
     3300036: WindGem
+    3300038: Arch
     4300000: Cube
     4300002: Cave_MidSection_A
     4300004: Cave_CapEnd_A
@@ -99,6 +103,7 @@ ModelImporter:
     4300030: Cube_004
     4300032: Cube_003
     4300034: WindGem
+    4300036: Arch
     7400000: Default Take
     9500000: //RootNode
   materials:
