@@ -92,7 +92,7 @@ public class CharacterControl : MonoBehaviour {
             gui.GetComponent<GUI>().scroll(this.highlight);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && state == State.normal)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             charged();
         }
