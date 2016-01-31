@@ -1,10 +1,62 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 8177b1ff87bdbc142918aa0a84037ec0
 timeCreated: 1454233036
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName: {}
+=======
+guid: 84f2c971a1b0b644684f3caa902ab91f
+timeCreated: 1454229252
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Abdomen
+    100002: Armature
+    100004: Fang_L
+    100006: Fang_R
+    100008: Foot1_L
+    100010: Foot1_R
+    100012: Foot4_L
+    100014: Foot4_R
+    100016: Head
+    100018: Leg1_L
+    100020: Leg1_R
+    100022: Leg2_L
+    100024: Leg2_R
+    100026: Leg3_L
+    100028: Leg3_R
+    100030: Leg4_L
+    100032: Leg4_R
+    100034: Spider
+    100036: //RootNode
+    400000: Abdomen
+    400002: Armature
+    400004: Fang_L
+    400006: Fang_R
+    400008: Foot1_L
+    400010: Foot1_R
+    400012: Foot4_L
+    400014: Foot4_R
+    400016: Head
+    400018: Leg1_L
+    400020: Leg1_R
+    400022: Leg2_L
+    400024: Leg2_R
+    400026: Leg3_L
+    400028: Leg3_R
+    400030: Leg4_L
+    400032: Leg4_R
+    400034: //RootNode
+    400036: Spider
+    4300000: Spider
+    7400000: Default Take
+    7400002: ArmatureAction
+    9500000: //RootNode
+    13700000: Spider
+>>>>>>> origin/master
   materials:
     importMaterials: 1
     materialName: 0
