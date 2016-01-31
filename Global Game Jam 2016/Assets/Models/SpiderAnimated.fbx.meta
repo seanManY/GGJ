@@ -64,7 +64,9 @@ ModelImporter:
     400054: Spider
     400056: //RootNode
     4300000: Spider
-    7400000: Armature|ArmatureAction
+    7400000: RevealAction
+    7400002: AttackAction
+    7400004: DeathAction
     9500000: //RootNode
     13700000: Spider
   materials:
@@ -87,7 +89,265 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: RevealAction
+      takeName: Armature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Abdomen
+        weight: 1
+      - path: Armature/Abdomen/Head
+        weight: 1
+      - path: Armature/Abdomen/Head/Fang_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Fang_L/Fang_L_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Fang_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Fang_R/Fang_R_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_L/Foot1_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_L/Foot1_L/Foot1_L_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_R/Foot1_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_R/Foot1_R/Foot1_R_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg2_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg2_L/Leg2_L_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg2_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg2_R/Leg2_R_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg3_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg3_L/Leg3_L_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg3_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg3_R/Leg3_R_end
+        weight: 1
+      - path: Armature/Abdomen/Leg4_L
+        weight: 1
+      - path: Armature/Abdomen/Leg4_L/Foot4_L
+        weight: 1
+      - path: Armature/Abdomen/Leg4_L/Foot4_L/Foot4_L_end
+        weight: 1
+      - path: Armature/Abdomen/Leg4_R
+        weight: 1
+      - path: Armature/Abdomen/Leg4_R/Foot4_R
+        weight: 1
+      - path: Armature/Abdomen/Leg4_R/Foot4_R/Foot4_R_end
+        weight: 1
+      - path: Spider
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: AttackAction
+      takeName: Armature|ArmatureAction
+      firstFrame: 30
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Abdomen
+        weight: 1
+      - path: Armature/Abdomen/Head
+        weight: 1
+      - path: Armature/Abdomen/Head/Fang_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Fang_L/Fang_L_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Fang_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Fang_R/Fang_R_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_L/Foot1_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_L/Foot1_L/Foot1_L_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_R/Foot1_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_R/Foot1_R/Foot1_R_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg2_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg2_L/Leg2_L_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg2_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg2_R/Leg2_R_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg3_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg3_L/Leg3_L_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg3_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg3_R/Leg3_R_end
+        weight: 1
+      - path: Armature/Abdomen/Leg4_L
+        weight: 1
+      - path: Armature/Abdomen/Leg4_L/Foot4_L
+        weight: 1
+      - path: Armature/Abdomen/Leg4_L/Foot4_L/Foot4_L_end
+        weight: 1
+      - path: Armature/Abdomen/Leg4_R
+        weight: 1
+      - path: Armature/Abdomen/Leg4_R/Foot4_R
+        weight: 1
+      - path: Armature/Abdomen/Leg4_R/Foot4_R/Foot4_R_end
+        weight: 1
+      - path: Spider
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DeathAction
+      takeName: Armature|ArmatureAction
+      firstFrame: 60
+      lastFrame: 89
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Abdomen
+        weight: 1
+      - path: Armature/Abdomen/Head
+        weight: 1
+      - path: Armature/Abdomen/Head/Fang_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Fang_L/Fang_L_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Fang_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Fang_R/Fang_R_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_L/Foot1_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_L/Foot1_L/Foot1_L_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_R/Foot1_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg1_R/Foot1_R/Foot1_R_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg2_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg2_L/Leg2_L_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg2_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg2_R/Leg2_R_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg3_L
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg3_L/Leg3_L_end
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg3_R
+        weight: 1
+      - path: Armature/Abdomen/Head/Leg3_R/Leg3_R_end
+        weight: 1
+      - path: Armature/Abdomen/Leg4_L
+        weight: 1
+      - path: Armature/Abdomen/Leg4_L/Foot4_L
+        weight: 1
+      - path: Armature/Abdomen/Leg4_L/Foot4_L/Foot4_L_end
+        weight: 1
+      - path: Armature/Abdomen/Leg4_R
+        weight: 1
+      - path: Armature/Abdomen/Leg4_R/Foot4_R
+        weight: 1
+      - path: Armature/Abdomen/Leg4_R/Foot4_R/Foot4_R_end
+        weight: 1
+      - path: Spider
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
