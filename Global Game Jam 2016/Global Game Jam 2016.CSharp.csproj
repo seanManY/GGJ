@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\GUI.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GroundCheck.cs" />
+    <Compile Include="Assets\Scripts\LoadLevel.cs" />
     <Compile Include="Assets\Scripts\ObstacleBehavior.cs" />
     <Compile Include="Assets\Scripts\Power.cs" />
     <Compile Include="Assets\Scripts\ShotBehavior.cs" />

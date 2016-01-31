@@ -105,12 +105,15 @@ public class GUI : MonoBehaviour
         Destroy(Health[health]);
     }
 
+<<<<<<< HEAD
 
     internal static void Label(Rect rect, string p)
     {
         throw new System.NotImplementedException();
     }
 
+=======
+>>>>>>> origin/master
     public void heal()
     {
         for (int i = 0; i < 3; i++)
@@ -123,6 +126,9 @@ public class GUI : MonoBehaviour
     public void scroll(int pow)
     {
         select.transform.position = highPos + (new Vector3(0, -1.14f, 0)) * pow;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     }
 }
