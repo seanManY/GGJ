@@ -75,4 +75,9 @@ public class GUI : MonoBehaviour
     {
         Destroy(Health[health]);
     }
+
+    internal static void Label(Rect rect, string p)
+    {
+        throw new System.NotImplementedException();
+    }
 }

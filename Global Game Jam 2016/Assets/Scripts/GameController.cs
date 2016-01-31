@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour {
         
 
         //player
-        Vector3 playerPos = new Vector3(-5, 5, 0);
+        Vector3 playerPos = new Vector3(-4, 5, 0);
         Instantiate(player, playerPos, Quaternion.identity);
 
         for (int i = 0; i < 50; i++)
