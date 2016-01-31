@@ -31,6 +31,10 @@ public class CharacterControl : MonoBehaviour {
     public Transform shootPrefab; // position of the shooter
     public GameObject shot;        //the shot prefab
 
+    public float fireRate;
+    private float nextFire = 5;
+    public int specialFireRate = 6;
+    public int airTime = 6;
     
     // rigidbody.constraints = RigidBodyConstraints.FreezePositionY;
 	// Use this for initialization
@@ -53,6 +57,12 @@ public class CharacterControl : MonoBehaviour {
         //Debug.Log(health);
         //if (Input.GetButton("Jump") && grounded)
         //   gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight);
+
+        if (Input.GetKeyDown(KeyCode.LeftAlt) && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            shoot();
+        }
     }
 
     void FixedUpdate () 
@@ -66,9 +76,6 @@ public class CharacterControl : MonoBehaviour {
             Jump();
         }
             
-
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
-            shoot();
 
         if(health <= 0)
         {
@@ -213,4 +220,40 @@ public class CharacterControl : MonoBehaviour {
         invincible = false;
         
     }
+
+    //super charged
+    public void fireRitual()
+    {
+        while(Time.time <= specialFireRate)
+        {
+            fireRate = .00001f;
+            fireCount = 0;
+        }
+    }
+
+    
+
+    public void airRitual()
+    {
+        while (Time.time <= airTime)
+        {
+            
+            Vector3 movement = new Vector3(-2, 0.0f, 0.0f);
+            GetComponent<Rigidbody>().velocity = movement;
+
+            airCount = 0;
+        }
+        
+    }
+
+    public void waterRitual()
+    {
+        if(health != 3)
+        {
+            health = 3;
+            waterCount = 0;
+        }
+             
+    }
+
 }
