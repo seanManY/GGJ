@@ -68,19 +68,13 @@ public class CharacterControl : MonoBehaviour {
             nextFire = Time.time + fireRate;
             shoot();
         }
-    }
 
-    void FixedUpdate () 
-    {
-       
-        //Debug.Log(health);
-        GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity + new Vector3(0, -gravity, 0);
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
 
             Jump();
         }
-            
+
         if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             highlight = (highlight + 2) % 3;
@@ -97,6 +91,14 @@ public class CharacterControl : MonoBehaviour {
         {
             charged();
         }
+    }
+
+    void FixedUpdate () 
+    {
+       
+        //Debug.Log(health);
+        GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity + new Vector3(0, -gravity, 0);
+        
 
         if (health <= 0)
         {
