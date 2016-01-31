@@ -25,7 +25,7 @@ public class GUI : MonoBehaviour
     {
         Instantiate(Background, new Vector3(-7.25f, 4, -1), Quaternion.identity);
 
-        guiPos = new Vector3(-6.81f, 3, -2.5f);
+        guiPos = new Vector3(-6.81f, 2.8f, -2.5f);
         for (int i = 0; i < 3; i++)
         {
             for (int j = 0; j < 3; j++)
@@ -105,11 +105,6 @@ public class GUI : MonoBehaviour
         Destroy(Health[health]);
     }
 
-<<<<<<< HEAD
-    internal static void Label(Rect rect, string p)
-    {
-        throw new System.NotImplementedException();
-=======
     public void heal()
     {
         for (int i = 0; i < 3; i++)
@@ -122,6 +117,5 @@ public class GUI : MonoBehaviour
     public void scroll(int pow)
     {
         select.transform.position = highPos + (new Vector3(0, -1.14f, 0)) * pow;
->>>>>>> origin/master
     }
 }
