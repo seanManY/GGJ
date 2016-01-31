@@ -97,7 +97,7 @@ public class GameController : MonoBehaviour {
                 else if (random <= 90)
                 {
                     //spider generator
-                    Vector3 spiderPos = new Vector3(15, 3, 0);
+                    Vector3 spiderPos = new Vector3(15, 7, 0);
                     Instantiate(spider, spiderPos, Quaternion.Euler(0, 0, 0));
                     block = false;
                     ranTime = ranRate;
@@ -116,6 +116,7 @@ public class GameController : MonoBehaviour {
 
             block = true;
             //ranRate *= .00001f;
+            Debug.Log(ranRate);
            
         }
 
