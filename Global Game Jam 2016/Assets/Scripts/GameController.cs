@@ -77,7 +77,7 @@ public class GameController : MonoBehaviour {
             if (ranTime < 0)
             {
 
-                if (random <= 100)
+                if (random <= 25)
                 {
                     //power ups
                     int powRandHeight = Random.Range(2, maxRange);

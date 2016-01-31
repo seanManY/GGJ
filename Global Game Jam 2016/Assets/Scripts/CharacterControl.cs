@@ -40,6 +40,8 @@ public class CharacterControl : MonoBehaviour {
     private float nextFire = 5;
     public int specialFireRate = 6;
     public int airTime = 6;
+
+    public bool pause;
     
     // rigidbody.constraints = RigidBodyConstraints.FreezePositionY;
 	// Use this for initialization
@@ -87,9 +89,16 @@ public class CharacterControl : MonoBehaviour {
             gui.GetComponent<GUI>().scroll(this.highlight);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && state == State.normal)
         {
             charged();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Time.timeScale = 1;
+            Application.LoadLevel("Sean");
+          
         }
     }
 
@@ -102,6 +111,7 @@ public class CharacterControl : MonoBehaviour {
 
         if (health <= 0)
         {
+            Time.timeScale = 0;
            // Debug.Log("you are dead");
         }
 	}
@@ -152,6 +162,7 @@ public class CharacterControl : MonoBehaviour {
                 gui.GetComponent<GUI>().add(fireCount, 0);
                 fireCount++;
             }
+
         }
 
         if (collision.gameObject.tag == "air")
@@ -162,6 +173,7 @@ public class CharacterControl : MonoBehaviour {
                 gui.GetComponent<GUI>().add(airCount, 1);
                 airCount++;
             }
+
         }
 
         if (collision.gameObject.tag == "water")
@@ -249,13 +261,9 @@ public class CharacterControl : MonoBehaviour {
     {
         gui.GetComponent<GUI>().empty(0);
         Instantiate(megaShot, shootPrefab.transform.position, shootPrefab.rotation);
-            
-        //while (Time.time <= specialFireRate)
-        {
-            
-            //fireRate = .00001f;
-            //fireCount = 0;
-        }
+
+
+        fireCount = 0;
     }
     
 
@@ -266,8 +274,8 @@ public class CharacterControl : MonoBehaviour {
         gui.GetComponent<GUI>().empty(1);
         Jump();
         StartCoroutine(air());
-        
 
+        airCount = 0;
         
        
         
