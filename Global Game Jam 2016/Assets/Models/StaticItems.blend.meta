@@ -18,6 +18,7 @@ ModelImporter:
     100020: Spider_001
     100022: Spikes
     100024: Spider_Static
+    100026: WaterGem
     400000: //RootNode
     400002: Cave_MidSection_A
     400004: Cube
@@ -31,6 +32,7 @@ ModelImporter:
     400020: Spider_001
     400022: Spikes
     400024: Spider_Static
+    400026: WaterGem
     2300000: //RootNode
     2300002: Cave_MidSection_A
     2300004: Cube
@@ -44,6 +46,7 @@ ModelImporter:
     2300020: Spider_001
     2300022: Spikes
     2300024: Spider_Static
+    2300026: WaterGem
     3300000: //RootNode
     3300002: Cave_MidSection_A
     3300004: Cube
@@ -57,6 +60,7 @@ ModelImporter:
     3300020: Spider_001
     3300022: Spikes
     3300024: Spider_Static
+    3300026: WaterGem
     4300000: Cube
     4300002: Cave_MidSection_A
     4300004: Cave_CapEnd_A
@@ -69,6 +73,7 @@ ModelImporter:
     4300018: Spider
     4300020: Spikes
     4300022: Spider_Static
+    4300024: WaterGem
     7400000: Default Take
     9500000: //RootNode
   materials:
