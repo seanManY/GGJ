@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CharacterControl : MonoBehaviour {
 
@@ -35,6 +36,7 @@ public class CharacterControl : MonoBehaviour {
     public GameObject shot;        //the shot prefab
     public GameObject megaShot;
     public GameObject airPlat;
+    public GameObject endScreen;
 
     public float fireRate;
     private float nextFire = 5;
@@ -42,6 +44,7 @@ public class CharacterControl : MonoBehaviour {
     public int airTime = 6;
 
     public bool pause;
+    
     
     // rigidbody.constraints = RigidBodyConstraints.FreezePositionY;
 	// Use this for initialization
@@ -102,6 +105,8 @@ public class CharacterControl : MonoBehaviour {
         }
     }
 
+    
+
     void FixedUpdate () 
     {
        
@@ -112,9 +117,12 @@ public class CharacterControl : MonoBehaviour {
         if (health <= 0)
         {
             Time.timeScale = 0;
+            Instantiate(endScreen, endScreen.transform.position, Quaternion.identity);
            // Debug.Log("you are dead");
         }
 	}
+
+   
 
     public void shoot()
     {

@@ -92,7 +92,7 @@ public class GameController : MonoBehaviour {
                         case 1: POWER = (GameObject)Instantiate(water, powerPos, Quaternion.Euler(-90, 0, 0));
                                 POWER.GetComponent<Power>().setTag(powRandom);
                                 break;
-                        case 2: POWER = (GameObject)Instantiate(wind, powerPos, Quaternion.Euler(0, 0, 0) );
+                        case 2: POWER = (GameObject)Instantiate(wind, powerPos, Quaternion.Euler(90, 0, 0) );
                                 POWER.GetComponent<Power>().setTag(powRandom);
                                 break;
                     }
