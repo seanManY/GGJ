@@ -24,6 +24,7 @@ public class CharacterControl : MonoBehaviour {
     private int    waterCount = 0;
     private int    fireCount  = 0;
     private int    airCount   = 0;
+    private int    highlight  = 0;
 
     public  int    invFrames  = 3;
     private bool   invincible = false;
@@ -76,8 +77,24 @@ public class CharacterControl : MonoBehaviour {
             Jump();
         }
             
+        if (Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            highlight = (highlight + 2) % 3;
+            gui.GetComponent<GUI>().scroll(this.highlight);
+        }
 
-        if(health <= 0)
+        if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            highlight = (highlight + 1) % 3;
+            gui.GetComponent<GUI>().scroll(this.highlight);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            charged();
+        }
+
+        if (health <= 0)
         {
            // Debug.Log("you are dead");
         }
@@ -224,7 +241,9 @@ public class CharacterControl : MonoBehaviour {
     //super charged
     public void fireRitual()
     {
-        while(Time.time <= specialFireRate)
+        gui.GetComponent<GUI>().empty(0);
+
+        while (Time.time <= specialFireRate)
         {
             fireRate = .00001f;
             fireCount = 0;
@@ -235,6 +254,8 @@ public class CharacterControl : MonoBehaviour {
 
     public void airRitual()
     {
+        gui.GetComponent<GUI>().empty(1);
+
         while (Time.time <= airTime)
         {
             
@@ -248,12 +269,24 @@ public class CharacterControl : MonoBehaviour {
 
     public void waterRitual()
     {
-        if(health != 3)
+        if (health != 3)
         {
+            gui.GetComponent<GUI>().empty(2);
             health = 3;
+            gui.GetComponent<GUI>().heal();
             waterCount = 0;
         }
-             
     }
 
+    public void charged()
+    {
+        if (highlight == 0 && fireCount >= 3)
+            fireRitual();
+
+        if (highlight == 1 && airCount >= 3)
+            airRitual();
+
+        if (highlight == 2 && waterCount >= 3)
+            waterRitual();
+    }
 }

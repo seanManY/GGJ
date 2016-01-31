@@ -12,17 +12,20 @@ public class GUI : MonoBehaviour
     public GameObject RedOut;
     public GameObject GreenOut;
     public GameObject BlueOut;
+    public GameObject Highlighter;
     public GameObject Heart;
     private GameObject[,] Powers = new GameObject[3,3];
     private GameObject[] Health = new GameObject[3];
+    private GameObject select;
     private Vector3 guiPos;
+    private Vector3 highPos;
 
     // Use this for initialization
     void Start()
     {
         Instantiate(Background, new Vector3(-7.25f, 4, -1), Quaternion.identity);
 
-        guiPos = new Vector3(-6.81f, 3, -2.5f);
+        guiPos = new Vector3(-6.81f, 2.8f, -2.5f);
         for (int i = 0; i < 3; i++)
         {
             for (int j = 0; j < 3; j++)
@@ -41,6 +44,9 @@ public class GUI : MonoBehaviour
                 }
             }
         }
+
+        highPos = new Vector3(-6.85f, 2.63f, -1.5f);
+        select = (GameObject)Instantiate(Highlighter, highPos, Quaternion.identity);
 
         for (int i = 0; i < 3; i++)
         {
@@ -71,8 +77,45 @@ public class GUI : MonoBehaviour
         }
     }
 
+    public void empty(int type)
+    {
+        GameObject t = null;
+        switch (type)
+        {
+            case 0:
+                t = RedOut;
+                break;
+            case 1:
+                t = GreenOut;
+                break;
+            case 2:
+                t = BlueOut;
+                break;
+        }
+
+        for(int i = 0; i < 3; i++)
+        {
+            Destroy(Powers[i, type]);
+            Powers[i,type] = (GameObject)Instantiate(t, guiPos + new Vector3(.75f * (float)i, -type, 0), Quaternion.identity);
+        }
+    }
+
     public void damage(int health)
     {
         Destroy(Health[health]);
+    }
+
+    public void heal()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            Destroy(Health[i]);
+            Health[i] = (GameObject)Instantiate(Heart, new Vector3(-7.45f + i, 7, -2), Quaternion.identity);
+        }
+    }
+
+    public void scroll(int pow)
+    {
+        select.transform.position = highPos + (new Vector3(0, -1.14f, 0)) * pow;
     }
 }
