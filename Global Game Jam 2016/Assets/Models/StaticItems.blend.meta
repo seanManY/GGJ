@@ -14,9 +14,6 @@ ModelImporter:
     100012: Cube_002
     100014: Cave_Background_A
     100016: Wizard_Static
-    100018: Spider
-    100020: Spider_001
-    100022: Spikes
     400000: //RootNode
     400002: Cave_MidSection_A
     400004: Cube
@@ -26,9 +23,6 @@ ModelImporter:
     400012: Cube_002
     400014: Cave_Background_A
     400016: Wizard_Static
-    400018: Spider
-    400020: Spider_001
-    400022: Spikes
     2300000: //RootNode
     2300002: Cave_MidSection_A
     2300004: Cube
@@ -38,9 +32,6 @@ ModelImporter:
     2300012: Cube_002
     2300014: Cave_Background_A
     2300016: Wizard_Static
-    2300018: Spider
-    2300020: Spider_001
-    2300022: Spikes
     3300000: //RootNode
     3300002: Cave_MidSection_A
     3300004: Cube
@@ -50,9 +41,6 @@ ModelImporter:
     3300012: Cube_002
     3300014: Cave_Background_A
     3300016: Wizard_Static
-    3300018: Spider
-    3300020: Spider_001
-    3300022: Spikes
     4300000: Cube
     4300002: Cave_MidSection_A
     4300004: Cave_CapEnd_A
@@ -61,9 +49,6 @@ ModelImporter:
     4300010: Cube_002
     4300012: Cave_Background_A
     4300014: Wizard_Static
-    4300016: Spider_001
-    4300018: Spider
-    4300020: Spikes
     7400000: Default Take
     9500000: //RootNode
   materials:
