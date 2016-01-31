@@ -1,4 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 8177b1ff87bdbc142918aa0a84037ec0
+timeCreated: 1454233036
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName: {}
+=======
 guid: 84f2c971a1b0b644684f3caa902ab91f
 timeCreated: 1454229252
 licenseType: Free
@@ -48,6 +56,7 @@ ModelImporter:
     7400002: ArmatureAction
     9500000: //RootNode
     13700000: Spider
+>>>>>>> origin/master
   materials:
     importMaterials: 1
     materialName: 0
